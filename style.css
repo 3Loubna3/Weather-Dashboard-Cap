@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Helvetica';
+    overflow: hidden; /* Prevent scrolling */
+    background-size: cover;
+    transition: background 0.5s ease;
+
+}
+
+/* Video styling */
+
+
+
+#searchdiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#searchdiv input{
+    width: 350px;
+}
+
+#searchdiv h1{
+    font-size: 38px;
+    padding: 20px;
+    background: linear-gradient(45deg,rgb(245, 243, 243),rgb(209, 206, 206));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
+
+
+/* Weather card styles */
+.weather-card {
+    transition: opacity 0.5s ease, transform 0.3s ease;
+    margin-top: 80px; /* Increased to move down the weather card */
+}
+
+
+
+/* Styling for weather icons */
+.weather-icon {
+    width: 100px;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Info box styling */
+
+
+.info-box {
+    
+    border: 2px solid rgba(231, 225, 225, 0.5); /* Border for each info box */
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: rgba(240, 236, 236, 0.2); /* Transparent background for info boxes */
+}
+
+.info-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Info value styling */
+.info-value {
+    font-size: 1.5rem; /* Size for the values */
+    font-weight: bold; /* Bold text */
+    color: rgb(255, 255, 255); /* Set text color to white */
+}
+
+/* Footer styling */
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 4px;
+
+}
+/* City name styling */
+#city-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 3.5rem; /* Ensure it's large */
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9); /* Light color for visibility */
+}
+
+#weather-card img{
+    color: tomato;
+}
+/* Weather description styling */
+#weather-description {
+    font-size: 1.2rem; /* Adjust the size as needed */
+    font-weight: bold; /* Make description bold */
+    color: rgba(255, 255, 255, 0.8); /* Light color for visibility */
+}
+

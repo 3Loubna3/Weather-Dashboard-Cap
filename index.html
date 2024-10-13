@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen transition-all duration-500 relative overflow-hidden">
+    <!-- Video Background -->
+    
+
+    <!-- Title and input aligned to the right and in a vertical column -->
+    <div id="searchdiv">
+        <h1 class="text-3xl font-bold ">Weather Dashboard</h1>
+
+        <div class="flex items-center mt-2">
+            <input 
+                type="text" 
+                id="city-input" 
+                placeholder= "Enter city name "
+                class="border border-gray-300 rounded p-2 bg-white bg-opacity-90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 w-64"
+                aria-label="City Name"
+            />
+            <button 
+            id="search-btn" 
+            class="ml-2 bg-black text-white p-2 rounded hover:bg-gray-700 transition duration-300 bg-opacity-50 p-1 rounded z-10" 
+            aria-label="Search Weather"
+        >
+        <b>
+            <i>Search</i>
+        </b> 
+            </button>
+        </div>
+    </div>
+    
+
+    <!-- Weather info -->
+    <div class="container">
+        <div id="error-message" class="text-red-500 mb-4"></div>
+
+        <div id="weather-card" class="weather-card hidden mt-4">
+            <h2 id="city-name" class="text-2xl font-semibold"></h2>
+            <img id="weather-icon" alt="Weather Icon" class="weather-icon mx-auto my-2" />
+            <p id="weather-description" class="text-center font-bold"></p>
+
+            <div id="infocont" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+                <div class="info-box">
+                    <div class="info-label">Temperature:</div>
+                    <div class="info-value" id="temp"></div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">Humidity:</div>
+                    <div class="info-value" id="humidity"></div>
+                </div>
+                <div class="info-box">
+                    <div class="info-label">Wind Speed:</div>
+                    <div class="info-value" id="wind-speed"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        
+   <!-- Footer -->
+   <footer class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-xs bg-opacity-50 p-1 rounded z-10">
+    &copy; 2024 Weather Dashboard. All Rights Reserved.
+     
+   </footer>
+  
+
+   
+
+<script src="script.js"></script>
+</body>
+</html>
