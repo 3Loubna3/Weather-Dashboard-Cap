@@ -9,7 +9,10 @@
 </head>
 <body class="bg-gray-100 flex flex-col min-h-screen transition-all duration-500 relative overflow-hidden">
     <!-- Video Background -->
-    
+    <video id="background-video" class="fixed top-0 left-0 w-full h-full object-cover" autoplay loop muted>
+        <source id="video-source" src="" type="video/mp4">
+        
+    </video>
 
     <!-- Title and input aligned to the right and in a vertical column -->
     <div id="searchdiv">
@@ -68,12 +71,11 @@
    <!-- Footer -->
    <footer class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-xs bg-opacity-50 p-1 rounded z-10">
     &copy; 2024 Weather Dashboard. All Rights Reserved.
-     
-   </footer>
-  
-
    
+    
+</footer>
+    
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
