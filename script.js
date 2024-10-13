@@ -39,6 +39,14 @@ async function updateWeather(city) {
         // Set weather icon based on OpenWeather icon code
         const iconCode = weatherData.weather[0].icon;
         document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+       // Assuming this is inside your weather data fetch function
+
+// Assuming this is inside your weather data fetch function
+if (iconCode === '01d' || iconCode === '01n') {
+    document.getElementById('weather-icon').src = 'images/sun_icon.png'; // Adjusted path and file name
+} else {
+    document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+}
 
         // Change background video based on weather condition
         const videoSource = document.getElementById('video-source');
@@ -50,6 +58,16 @@ async function updateWeather(city) {
             videoSource.src = 'https://cdn.pixabay.com/video/2023/02/22/151744-801455851_large.mp4';
         } else if (weatherCondition.includes('haze')) {
             videoSource.src = 'https://cdn.pixabay.com/video/2018/05/05/16011-268207201_large.mp4';
+        } else if (weatherCondition.includes('mist')) {
+            videoSource.src = 'https://cdn.pixabay.com/video/2018/05/05/16011-268207201_large.mp4';
+        } else if (weatherCondition.includes('fog')) {
+            videoSource.src = 'https://cdn.pixabay.com/video/2018/05/05/16011-268207201_large.mp4';
+        } else if (weatherCondition.includes('thunderstorm')) {
+            videoSource.src = 'https://assets.mixkit.co/videos/48918/48918-720.mp4';
+        } else if (weatherCondition.includes('snow')) {
+            videoSource.src = 'https://videos.pexels.com/video-files/6933537/6933537-uhd_2732_1440_24fps.mp4';
+        } else if (weatherCondition.includes('tornado')) {
+            videoSource.src = 'https://assets.mixkit.co/videos/9591/9591-720.mp4';
         } else {
             videoSource.src = 'https://cdn.pixabay.com/video/2019/05/22/23881-337972830_large.mp4'; // Default video
         }
