@@ -1,4 +1,4 @@
-const OPENWEATHER_API_KEY = 'db556e87474a3ff3bf552011ffad7a93'; // Your actual OpenWeather API Key 
+const OPENWEATHER_API_KEY = 'db556e87474a3ff3bf552011ffad7a93'; // My OpenWeather API Key 
 const DEFAULT_CITY = 'Tokyo'; // Constant for default city
 
 // Fetch weather data from OpenWeather API
@@ -6,7 +6,7 @@ async function fetchWeather(city) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${OPENWEATHER_API_KEY}&units=metric`;
     const response = await fetch(url);
     if (!response.ok) {
-        throw new Error('City not found');
+        throw new Error('City not found :(');
     }
     return await response.json();
 }
@@ -39,14 +39,14 @@ async function updateWeather(city) {
         // Set weather icon based on OpenWeather icon code
         const iconCode = weatherData.weather[0].icon;
         document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-       // Assuming this is inside your weather data fetch function
+       
 
-// Assuming this is inside your weather data fetch function
-if (iconCode === '01d' || iconCode === '01n') {
-    document.getElementById('weather-icon').src = 'images/sun_icon.png'; // Adjusted path and file name
-} else {
-    document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-}
+       // Assuming this is inside your weather data fetch function
+        if (iconCode === '01d' || iconCode === '01n') {
+        document.getElementById('weather-icon').src = 'images/sun_icon.png'; // Adjusted path and file name
+       } else {
+       document.getElementById('weather-icon').src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+       }
 
         // Change background video based on weather condition
         const videoSource = document.getElementById('video-source');
