@@ -1,119 +1,122 @@
+/* Body styling */
 body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Helvetica';
-    overflow: hidden; /* Prevent scrolling */
-    background-size: cover;
-    transition: background 0.5s ease;
-
+    display: flex; /* Enables a flexible layout for the body */
+    flex-direction: column; /* Arranges child elements in a vertical stack */
+    font-family: 'Helvetica'; /* Sets the font to Helvetica */
+    overflow: hidden; /* Prevent scrolling of the body */
+    background-size: cover; /* Ensures the background image covers the entire body */
+    transition: background 0.5s ease; /* Smooth transition effect for background changes */
 }
 
-/* Video styling */
+/* Video background styling */
 #background-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    z-index: -1; 
+    width: 100%; /* Makes the video stretch to the full width */
+    height: 100%; /* Makes the video stretch to the full height */
+    object-fit: cover; /* Ensures the video covers the area without distortion */
+    z-index: -1; /* Places the video behind other content */
 }
 
-#searchdiv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Search division styling */
+#searchdiv {
+    display: flex; /* Enables a flexible layout for the search section */
+    flex-direction: column; /* Stacks child elements vertically */
+    align-items: center; /* Centers child elements horizontally */
+    justify-content: center; /* Centers child elements vertically */
 }
 
-#searchdiv input{
-    width: 350px;
+/* Input field styling */
+#searchdiv input {
+    width: 350px; /* Sets the width of the input field */
 }
 
-#searchdiv h1{
-    font-size: 38px;
-    padding: 20px;
-    background: linear-gradient(45deg,rgb(245, 243, 243),rgb(209, 206, 206));
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    }
+/* Title styling */
+#searchdiv h1 {
+    font-size: 38px; /* Sets the font size of the heading */
+    padding: 20px; /* Adds space around the heading */
+    background: linear-gradient(45deg, rgb(245, 243, 243), rgb(209, 206, 206)); /* Applies a gradient background */
+    background-clip: text; /* Clips the background to the text only */
+    -webkit-text-fill-color: transparent; /* Makes the text transparent to show the gradient */
+}
 
-.cointainer{
-width: 100%;
-height: 100%;
-overflow: hidden;
+/* Full-width container styling */
+.cointainer {
+    width: 100%; /* Ensures container takes full width */
+    height: 100%; /* Ensures container takes full height */
+    overflow: hidden; /* Hides any overflow content */
 }
 
 /* Weather card styles */
 .weather-card {
-    transition: opacity 0.5s ease, transform 0.3s ease;
-    margin-top: 80px; 
+    transition: opacity 0.5s ease, transform 0.3s ease; /* Smooth transition for visibility changes */
+    margin-top: 80px; /* Adds space above the weather card */
 }
 
+/* Hidden weather card state */
 .weather-card.hidden {
-    opacity: 0;
-    transform: translateY(-20px);
+    opacity: 0; /* Makes the card invisible */
+    transform: translateY(-20px); /* Moves the card up slightly when hidden */
 }
 
+/* Visible weather card state */
 .weather-card:not(.hidden) {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Makes the card fully visible */
+    transform: translateY(0); /* Resets the card's position */
 }
 
-/* Styling for weather icons */
+/* Weather icon styling */
 .weather-icon {
-    width: 100px;
-    height: auto;
+    width: 100px; /* Sets a fixed width for the weather icon */
+    height: auto; /* Automatically adjusts the height based on the width */
 }
 
+/* Container for central alignment */
 .container {
-    display: flex;
-    justify-content: center;
-
+    display: flex; /* Enables a flexible layout */
+    justify-content: center; /* Centers child elements horizontally */
 }
-
 
 /* Info box styling */
-
-
 .info-box {
-    
-    border: 2px solid rgba(255, 255, 255, 0.5); 
-    padding: 1rem;
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border around info boxes */
+    padding: 1rem; /* Adds padding inside the info box */
+    border-radius: 8px; /* Rounds the corners of the info box */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background color */
 }
 
+/* Info label styling */
 .info-label {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.2rem; /* Sets the font size for the label */
+    font-weight: 600; /* Makes the label text bold */
 }
 
 /* Info value styling */
 .info-value {
-    font-size: 1.5rem; 
-    font-weight: bold; 
-    color: rgb(255, 255, 255); 
+    font-size: 1.5rem; /* Increases the font size for the value */
+    font-weight: bold; /* Makes the value text bold */
+    color: rgb(255, 255, 255); /* Sets the text color to white */
 }
 
 /* Footer styling */
 footer {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 4px;
-
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for the footer */
+    padding: 5px 10px; /* Adds padding inside the footer */
+    border-radius: 4px; /* Rounds the corners of the footer */
 }
+
 /* City name styling */
 #city-name {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-size: 3.5rem; 
-    font-weight: bold;
-    color: rgba(255, 255, 255, 0.9); 
+    display: flex; /* Enables flexible layout for city name */
+    justify-content: center; /* Centers the text horizontally */
+    align-items: center; /* Centers the text vertically */
+    width: 100%; /* Ensures city name spans full width */
+    font-size: 3.5rem; /* Sets the font size for the city name */
+    font-weight: bold; /* Makes the city name bold */
+    color: rgba(255, 255, 255, 0.9); /* Sets a light color for the text */
 }
 
 /* Weather description styling */
 #weather-description {
-    font-size: 1.2rem; 
-    font-weight: bold; 
-    color: rgba(255, 255, 255, 0.959); 
+    font-size: 1.2rem; /* Sets the font size for the weather description */
+    font-weight: bold; /* Makes the description bold */
+    color: rgba(255, 255, 255, 0.993); /* Sets a light color for the text */
 }

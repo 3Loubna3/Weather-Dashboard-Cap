@@ -1,81 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" /> <!-- Sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures responsive design on mobile devices -->
+    <title>Weather Dashboard</title> <!-- Title of the webpage -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> <!-- Tailwind CSS for styling -->
+    <link rel="stylesheet" href="style.css" /> <!-- Custom CSS file for additional styles -->
 </head>
+
 <body class="bg-gray-100 flex flex-col min-h-screen transition-all duration-500 relative overflow-hidden">
     <!-- Video Background -->
     <video id="background-video" class="fixed top-0 left-0 w-full h-full object-cover" autoplay loop muted>
-        <source id="video-source" src="" type="video/mp4">
-        
+        <source id="video-source" src="" type="video/mp4"> <!-- Video source for the background -->
     </video>
 
     <!-- Title and input aligned to the right and in a vertical column -->
     <div id="searchdiv">
-        <h1 class="text-3xl font-bold ">Weather Dashboard</h1>
+        <h1 class="text-3xl font-bold ">Weather Dashboard</h1> <!-- Main title of the dashboard -->
 
-        <div class="flex items-center mt-2">
-            <input 
-                type="text" 
-                id="city-input" 
-                placeholder= "Enter city name "
+        <div class="flex items-center mt-2"> <!-- Container for input field and button -->
+            <input type="text" id="city-input" placeholder="Enter city name "
                 class="border border-gray-300 rounded p-2 bg-white bg-opacity-90 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 w-64"
-                aria-label="City Name"
-            />
-            <button 
-            id="search-btn" 
-            class="ml-2 bg-black text-white p-2 rounded hover:bg-gray-700 transition duration-300 bg-opacity-50 p-1 rounded z-10" 
-            aria-label="Search Weather"
-        >
-        <b>
-            <i>Search</i>
-        </b> 
+                aria-label="City Name" /> <!-- Input field for city name -->
+            <button id="search-btn"
+                class="ml-2 bg-black text-white p-2 rounded hover:bg-gray-700 transition duration-300 bg-opacity-50 p-1 rounded z-10"
+                aria-label="Search Weather">
+                <b>
+                    <i>Search</i> <!-- Button to trigger weather search -->
+                </b>
             </button>
         </div>
     </div>
-    
 
     <!-- Weather info -->
     <div class="container">
-        <div id="error-message" class="text-red-500 mb-4"></div>
+        <div id="error-message" class="text-red-500 mb-4"></div> <!-- Displays error messages -->
 
-        <div id="weather-card" class="weather-card hidden mt-4">
-            <h2 id="city-name" class="text-2xl font-semibold"></h2>
-            <img id="weather-icon" alt="Weather Icon" class="weather-icon mx-auto my-2" />
-            <p id="weather-description" class="text-center font-bold"></p>
+        <div id="weather-card" class="weather-card hidden mt-4"> <!-- Weather information card, initially hidden -->
+            <h2 id="city-name" class="text-2xl font-semibold"></h2> <!-- Displays city name -->
+            <img id="weather-icon" alt="Weather Icon" class="weather-icon mx-auto my-2" /> <!-- Weather icon -->
+            <p id="weather-description" class="text-center font-bold"></p> <!-- Weather description -->
 
-            <div id="infocont" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+            <div id="infocont" class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4"> <!-- Grid layout for weather info -->
                 <div class="info-box">
-                    <div class="info-label">Temperature:</div>
-                    <div class="info-value" id="temp"></div>
+                    <div class="info-label">Temperature:</div> <!-- Temperature label -->
+                    <div class="info-value" id="temp"></div> <!-- Displays temperature value -->
                 </div>
                 <div class="info-box">
-                    <div class="info-label">Humidity:</div>
-                    <div class="info-value" id="humidity"></div>
+                    <div class="info-label">Humidity:</div> <!-- Humidity label -->
+                    <div class="info-value" id="humidity"></div> <!-- Displays humidity value -->
                 </div>
                 <div class="info-box">
-                    <div class="info-label">Wind Speed:</div>
-                    <div class="info-value" id="wind-speed"></div>
+                    <div class="info-label">Wind Speed:</div> <!-- Wind speed label -->
+                    <div class="info-value" id="wind-speed"></div> <!-- Displays wind speed value -->
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-xs bg-opacity-50 p-1 rounded z-10">
+        &copy; 2024 Weather Dashboard. All Rights Reserved. <!-- Copyright notice -->
+    </footer>
 
-
-        
-   <!-- Footer -->
-   <footer class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-xs bg-opacity-50 p-1 rounded z-10">
-    &copy; 2024 Weather Dashboard. All Rights Reserved.
-   
-    
-</footer>
-    
-
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Links to the JavaScript file for functionality -->
 </body>
+
 </html>
