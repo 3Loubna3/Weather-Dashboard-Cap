@@ -1,5 +1,5 @@
 // Store the OpenWeather API Key for accessing weather data
-const OPENWEATHER_API_KEY = 'db556e87474a3ff3bf552011ffad7a93'; // My OpenWeather API Key 
+const OPENWEATHER_API_KEY = 'c79d24e9a0ba1b20bc36c6587097b4c3'; // My OpenWeather API Key 
 
 // Default city to display weather information if no input is provided
 const DEFAULT_CITY = 'Tokyo'; // Constant for default city
